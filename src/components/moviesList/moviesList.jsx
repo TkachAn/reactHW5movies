@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import css from './moviesList.module.css';
 import PropTypes from 'prop-types';
-export default function List({ movies, search }) {
+export default function List({ movies }) {
   const location = useLocation();
 
   return (
@@ -15,7 +15,7 @@ export default function List({ movies, search }) {
                   <Link
                     to={`/${id}`}
                     state={{ from: location }}
-                    search={search}
+                    // search={search}
                   >
                     {backdrop_path ? (
                       <img
@@ -31,7 +31,7 @@ export default function List({ movies, search }) {
                   <Link
                     to={`/${id}`}
                     state={{ from: location }}
-                    search={search}
+                    // search={search}
                   >
                     <h3 className={css.title}>{title}</h3>
                   </Link>
