@@ -1,11 +1,11 @@
 import { useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react'; //, lazy
+import { useState, useEffect, lazy } from 'react'; //, lazy
 import { apiTMDbTrend } from '../../TMBD/API';
 import css from './home.module.css';
-import List from 'components/moviesList/moviesList';
-// const List = lazy(() =>
-//   import('components/moviesList/moviesList' /* webpackChunkName: "List" */)
-// );
+// import List from 'components/moviesList/moviesList';
+const List = lazy(() =>
+  import('components/moviesList/moviesList' /* webpackChunkName: "List" */)
+);
 export default function Home() {
   const [trendMovies, setTrendMovies] = useState([]);
   const [error, setError] = useState(null);
