@@ -1,10 +1,11 @@
-import { useState, useEffect, lazy } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react'; //, lazy
 import { apiTMDbTrend } from '../../TMBD/API';
 import css from './home.module.css';
-// import { List } from 'components/moviesList/moviesList';
-const List = lazy(() =>
-  import('components/moviesList/moviesList' /* webpackChunkName: "List" */)
-);
+import List from 'components/moviesList/moviesList';
+// const List = lazy(() =>
+//   import('components/moviesList/moviesList' /* webpackChunkName: "List" */)
+// );
 export default function Home() {
   const [trendMovies, setTrendMovies] = useState([]);
   const [error, setError] = useState(null);
@@ -24,13 +25,13 @@ export default function Home() {
     };
     fetchTMBd();
   }, []);
-
+  const location = useLocation();
   return (
     <main>
       <h2 className={css.title}>Trending Movies</h2>
       {loading && <h3>LOADING...</h3>}
-      {trendMovies && <List movies={trendMovies} />}
-      {error && <div>{('error', error)}</div>}
+      {trendMovies && <List movies={trendMovies} state={{ from: location }} />}
+      {error && <div>{('error_Home', error)}</div>}
     </main>
   );
 }
