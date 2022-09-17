@@ -28,7 +28,7 @@ export default function Details() {
         setMovie(res);
       })
       .catch(error => {
-        setError('Ooops. Something went wrong...');
+        setError('Ooops. Something went wrong...Details');
       })
       .finally(() => setLoading(false));
   }, [id]);
