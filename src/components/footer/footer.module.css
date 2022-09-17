@@ -1,0 +1,11 @@
+footer {
+  padding: 0 30px;
+  background-color: #0d253f;
+}
+.foo {
+  padding-right: 20px;
+  margin-top: 30px;
+  height: 60px;
+  background: right / 20% no-repeat url('../../TMDB/icon/blue_long_2.svg');
+  background-color: #0d253f;
+}
