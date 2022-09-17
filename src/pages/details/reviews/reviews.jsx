@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { apiTMDbReviews } from '../../../TMBD/API';
 import css from './reviews.module.css';
+
 export default function Reviews() {
   const [reviewList, setReviewList] = useState([]);
   const [error, setError] = useState(null);
@@ -49,6 +50,3 @@ export default function Reviews() {
     </>
   );
 }
-// {review.length ? (<h4 className={css.h41}>Author:{review.author}</h4>
-// <p className={css.text}>{review.content}</p>) : (<p>not content</p>)}
-//<h3 className={css.h3}>not content</h3>
