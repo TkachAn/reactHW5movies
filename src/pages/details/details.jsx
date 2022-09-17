@@ -6,7 +6,7 @@ import {
   useNavigate,
 } from 'react-router-dom';
 import { useEffect, useState, Suspense } from 'react';
-import { apiTMDbDetails } from 'TMDB/API';
+import { apiTMDbDetails } from '../../TMBD/API';
 import css from './details.module.css';
 
 export default function Details() {
