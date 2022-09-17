@@ -1,0 +1,31 @@
+.item {
+  color: darkgray;
+}
+
+.title {
+  font-size: 700;
+  margin-bottom: 5px;
+  color: darkslategrey;
+}
+.card {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+img {
+  width: 356px;
+  height: 200px;
+}
+.tumb {
+  width: 356px;
+  height: 200px;
+  height: calc();
+  background: center / 50% no-repeat url('../../TMDB/icon/blue_square_2.svg');
+}
+.overview {
+  max-width: 550px;
+  padding-bottom: 5px;
+  height: 160px;
+  overflow: hidden;
+}
