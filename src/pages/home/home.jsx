@@ -1,5 +1,5 @@
 import { useState, useEffect, lazy } from 'react';
-import { apiTMDbTrend } from 'TMDB/API';
+import { apiTMDbTrend } from '../../TMBD/API';
 import css from './home.module.css';
 // import { List } from 'components/moviesList/moviesList';
 const List = lazy(() =>
