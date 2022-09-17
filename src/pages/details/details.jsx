@@ -8,6 +8,7 @@ import {
 import { useEffect, useState, Suspense } from 'react';
 import { apiTMDbDetails } from 'TMDB/API';
 import css from './details.module.css';
+
 export default function Details() {
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
@@ -38,7 +39,7 @@ export default function Details() {
 
   return (
     <>
-      {loading && 'Loading ...'}
+      {loading && <h3>Loading ...</h3>}
       {error && <div>{error}</div>}
       {movie && (
         <div className={css.flex}>
