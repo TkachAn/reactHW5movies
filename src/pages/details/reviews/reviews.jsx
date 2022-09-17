@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { apiTMDbReviews } from 'TMDB/API';
+import { apiTMDbReviews } from '../../../TMBD/API';
 import css from './reviews.module.css';
 export default function Reviews() {
   const [reviewList, setReviewList] = useState([]);
