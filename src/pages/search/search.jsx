@@ -72,7 +72,7 @@ export default function Search() {
             <List movies={searchMovies} state={{ from: location }} />
           )}
         </Suspense>
-        {error && <div>{('error', error)}</div>}
+        {error && <div>{('error_Search', error)}</div>}
       </main>
     </>
   );
