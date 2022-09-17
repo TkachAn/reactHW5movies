@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { apiTMDbCredits } from 'TMDB/API';
+import { apiTMDbCredits } from '../../../TMBD/API';
 
 import css from './credit.module.css';
 export default function Credits() {
