@@ -10,17 +10,13 @@
   width: 264px;
   height: 396px;
 }
-.img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+
 .text {
   padding: 5px 10px;
   text-align: center;
 }
 .h41 {
   color: dimgrey;
-  font-weight: 700;
+  /* font-weight: 700; */
   font-size: 24px;
 }
