@@ -24,8 +24,8 @@
   height: auto;
 }
 .block {
-  /* display: flex; */
-  max-width: 720px;
+  /* max-width: 720px; */
+  width: 40vw;
   min-width: 320px;
   margin: 0 0 30px 0;
 }
@@ -51,4 +51,7 @@
   font-size: 24px;
   color: #01b4e4;
   /* font-weight: normal; */
+}
+.overview {
+  display: flex;
 }
