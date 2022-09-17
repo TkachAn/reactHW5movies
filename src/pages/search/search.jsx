@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect, Suspense, lazy } from 'react';
-import { apiTMDbSearch } from 'TMDB/API';
+import { apiTMDbSearch } from '../../TMBD/API';
 import css from './search.module.css';
 // import { List } from 'components/moviesList/moviesList';
 const List = lazy(() =>
