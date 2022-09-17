@@ -12,7 +12,7 @@ export const Header = () => {
         <ul className={css.list}>
           <li>
             <NavLink
-              to="/"
+              to="/home"
               className={css.links}
               style={({ isActive }) => (isActive ? activeClassName : undefined)}
             >
