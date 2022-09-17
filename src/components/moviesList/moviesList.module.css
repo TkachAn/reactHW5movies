@@ -14,14 +14,14 @@
   column-gap: 30px;
 }
 img {
-  width: 356px;
-  height: 200px;
+  width: 100%;
+  height: auto;
 }
 .tumb {
   width: 356px;
   height: 200px;
-  height: calc();
-  background: center / 50% no-repeat url('../../TMDB/icon/blue_square_2.svg');
+
+  /* background: center / 50% no-repeat url('../../TMDB/icon/blue_square_2.svg'); */
 }
 .overview {
   max-width: 550px;
