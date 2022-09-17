@@ -35,6 +35,7 @@ export default function Details() {
   let activeClassName = {
     fontSize: 24,
     color: '#90cea1',
+    fontWeight: 700,
   };
 
   return (
@@ -89,7 +90,7 @@ export default function Details() {
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <h4 className={css.reviews}>Reviews</h4>
+            <p className={css.reviews}>Reviews</p>
           </NavLink>
           <NavLink
             className={css.links}
@@ -97,7 +98,7 @@ export default function Details() {
             style={({ isActive }) => (isActive ? activeClassName : undefined)}
             state={location.state}
           >
-            <h4 className={css.cast}>Cast</h4>
+            <p className={css.cast}>Cast</p>
           </NavLink>
         </div>
         <hr />
