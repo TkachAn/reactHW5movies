@@ -63,6 +63,7 @@ export default function Details() {
               Go back
             </button>
             <h2 className={css.title}>{movie.title}</h2>
+            <hr />
 
             <div className={css.inf}>
               <h3 className={css.h3}>Year:</h3>
@@ -76,6 +77,7 @@ export default function Details() {
             </div>
             <div>
               <h3 className={css.h3ow}>Overview</h3>
+              <hr />
               <p className={css.overview}>{movie.overview}</p>
             </div>
           </div>
