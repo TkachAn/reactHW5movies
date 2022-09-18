@@ -49,7 +49,8 @@ export default function Reviews() {
           <h3 className={css.h3}>There are no reviews yet</h3>
           <p>
             You will be the first to leave a review here, but for this you need
-            to register on the TMBD website.
+            to register on
+            <a href="https://www.themoviedb.org/login"> the TMDB website</a>.
           </p>
         </>
       )}
