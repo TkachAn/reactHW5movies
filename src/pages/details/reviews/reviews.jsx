@@ -45,7 +45,13 @@ export default function Reviews() {
           })}
         </ul>
       ) : (
-        <h3 className={css.h3}>There are no reviews yet</h3>
+        <>
+          <h3 className={css.h3}>There are no reviews yet</h3>
+          <p>
+            You will be the first to leave a review here, but for this you need
+            to register on the TMBD website.
+          </p>
+        </>
       )}
     </>
   );
