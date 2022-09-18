@@ -24,8 +24,9 @@
   height: auto;
 }
 .block {
+  display: inline-block;
   /* max-width: 720px; */
-  width: 40vw;
+  width: 100vw-380px;
   min-width: 320px;
   margin: 0 0 30px 0;
 }
@@ -53,5 +54,6 @@
   /* font-weight: normal; */
 }
 .overview {
-  display: flex;
+  display: inline-block;
+  max-width: 720px;
 }
