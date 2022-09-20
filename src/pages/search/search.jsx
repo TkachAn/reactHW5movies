@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { useState, useEffect, Suspense, lazy } from 'react';
 import { apiTMDbSearch } from '../../TMBD/API';
 import css from './search.module.css';
@@ -6,15 +6,14 @@ import css from './search.module.css';
 const List = lazy(() => import('components/moviesList/moviesList'));
 export default function Search() {
   const [searchMovies, setSearchMovies] = useState([]);
-  const [query, setQuery] = useState(''); //query ? query :
+
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [queryForm, setQueryForm] = useState('');
-  useLocation().search = query;
+  const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
 
-  // const state = { from: location.pathname };
-  // console.log(state);
+  const query = searchParams.get('query');
   useEffect(() => {
     if (!query) return;
 
@@ -36,6 +35,7 @@ export default function Search() {
   const handleChange = e => {
     const { value } = e.currentTarget;
     setQueryForm(value);
+    // location = useLocation();
   };
 
   const onSubmit = e => {
@@ -44,7 +44,7 @@ export default function Search() {
       alert('Enter the film title');
     }
     if (queryForm) {
-      setQuery(queryForm);
+      setSearchParams({ query: `${queryForm}` });
     }
   };
 
@@ -78,4 +78,3 @@ export default function Search() {
     </>
   );
 }
-//state={{ from: location.pathname }}
