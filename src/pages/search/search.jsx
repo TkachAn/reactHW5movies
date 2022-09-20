@@ -3,18 +3,21 @@ import { useState, useEffect, Suspense, lazy } from 'react';
 import { apiTMDbSearch } from '../../TMBD/API';
 import css from './search.module.css';
 // import { List } from 'components/moviesList/moviesList';
-const List = lazy(() =>
-  import('components/moviesList/moviesList' /* webpackChunkName: "List" */)
-);
+const List = lazy(() => import('components/moviesList/moviesList'));
 export default function Search() {
   const [searchMovies, setSearchMovies] = useState([]);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(''); //query ? query :
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [queryForm, setQueryForm] = useState('');
+  useLocation().search = query;
+  const location = useLocation();
 
+  // const state = { from: location.pathname };
+  // console.log(state);
   useEffect(() => {
     if (!query) return;
+
     const fetchTMBd = () => {
       setLoading(true);
       apiTMDbSearch(query)
@@ -22,7 +25,7 @@ export default function Search() {
           setSearchMovies(res);
         })
         .catch(error => {
-          setError(`UPS, this is ${error}`);
+          setError(`UPS, this is ${error}Search`);
         })
         .finally(setLoading(false));
     };
@@ -44,8 +47,6 @@ export default function Search() {
       setQuery(queryForm);
     }
   };
-  useLocation().search = query;
-  const location = useLocation();
 
   return (
     <>
@@ -69,7 +70,7 @@ export default function Search() {
         <Suspense fallback={<h3>LOADING...</h3>}>
           {loading && <h3>LOADING...</h3>}
           {searchMovies.length > 0 && (
-            <List movies={searchMovies} state={{ from: location }} />
+            <List movies={searchMovies} state={{ from: location.pathname }} />
           )}
         </Suspense>
         {error && <div>{('error_Search', error)}</div>}
@@ -77,3 +78,4 @@ export default function Search() {
     </>
   );
 }
+//state={{ from: location.pathname }}
