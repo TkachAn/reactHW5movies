@@ -79,6 +79,12 @@ export default function Details() {
               <p className={css.year}>({getYear()}) </p>
               <h3 className={css.h3}>Score:</h3>
               <p className={css.score}>{movie.popularity} </p>
+              <h3 className={css.h3}>Countries</h3>
+              <p className={css.score}>
+                {movie.production_countries.map(
+                  country => `${country.name},  `
+                )}
+              </p>
               <h3 className={css.h3}>Genres:</h3>
               <p className={css.genres}>
                 {movie.genres.map(genre => `${genre.name},  `)}
