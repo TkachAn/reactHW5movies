@@ -72,7 +72,6 @@ export default function Details() {
               Go back
             </button>
 
-            <Link to={`/search/movie?query=o`}>GO BACK</Link>
             <h2 className={css.title}>{movie.title}</h2>
             <hr />
             <div className={css.inf}>
