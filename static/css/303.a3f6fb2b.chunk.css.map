@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/303.a3f6fb2b.chunk.css","mappings":"AAAA,qBAEE,kBAAmB,CADnB,eAEF,CACA,qBACE,aACF,CACA,mBACE,UACF","sources":["pages/details/reviews/reviews.module.css"],"sourcesContent":[".text {\n  margin-top: 10px;\n  margin-bottom: 20px;\n}\n.h41 {\n  color: dimgrey;\n}\n.h3 {\n  color: #000;\n}\n"],"names":[],"sourceRoot":""}
