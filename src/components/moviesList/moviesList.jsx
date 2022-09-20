@@ -23,7 +23,7 @@ export default function List({ movies }) {
                         alt="image_not_found"
                       />
                     ) : (
-                      <img src="https://via.placeholder.com/500x280" alt="" />
+                      <img src="https://via.placeholder.com/356x200" alt="" />
                     )}
                   </Link>
                 </div>
