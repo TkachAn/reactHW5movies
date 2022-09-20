@@ -4,8 +4,6 @@ import {
   useParams,
   useLocation,
   useNavigate,
-
-  // useSearchParams,
 } from 'react-router-dom';
 import { useEffect, useState, Suspense } from 'react';
 import { apiTMDbDetails } from '../../TMBD/API';
@@ -20,9 +18,7 @@ export default function Details() {
   console.log('location', location?.state?.from);
   const id = useParams().details;
   const navigate = useNavigate();
-  // const handleClick = () => {
-  //   navigate(location?.state?.from ?? '/');
-  // };
+
   const getYear = () => new Date(movie.release_date).getFullYear();
 
   useEffect(() => {
