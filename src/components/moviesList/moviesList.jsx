@@ -28,7 +28,7 @@ export default function List({ movies }) {
                   </Link>
                 </div>
                 <div>
-                  <Link to={`/${id}`} state={{ from: location }}>
+                  <Link to={`/${id}`} state={{ from: location.pathname }}>
                     <h3 className={css.title}>{title}</h3>
                   </Link>
                   <p className={css.overview}>{overview}</p>
