@@ -10,7 +10,7 @@ export default function Home() {
   const [trendMovies, setTrendMovies] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-
+  const location = useLocation();
   useEffect(() => {
     const fetchTMBd = () => {
       setLoading(true);
@@ -25,7 +25,7 @@ export default function Home() {
     };
     fetchTMBd();
   }, []);
-  const location = useLocation();
+
   return (
     <main>
       <h2 className={css.title}>Trending Movies</h2>
