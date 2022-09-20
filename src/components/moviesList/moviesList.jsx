@@ -7,7 +7,7 @@ export default function List({ movies }) {
   return (
     <>
       <ul className={css.list}>
-        {movies.map(({ id, title, overview, backdrop_path, state }) => {
+        {movies.map(({ id, title, overview, backdrop_path }) => {
           return (
             <li className={css.item} key={id}>
               <div className={css.card}>
@@ -28,11 +28,7 @@ export default function List({ movies }) {
                   </Link>
                 </div>
                 <div>
-                  <Link
-                    to={`/${id}`}
-                    state={{ from: location }}
-                    // search={search}
-                  >
+                  <Link to={`/${id}`} state={{ from: location }}>
                     <h3 className={css.title}>{title}</h3>
                   </Link>
                   <p className={css.overview}>{overview}</p>
