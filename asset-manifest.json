@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/reactHW5movies/static/css/main.ca9e5059.css",
-    "main.js": "/reactHW5movies/static/js/main.b127fdf9.js",
+    "main.js": "/reactHW5movies/static/js/main.aba6ecc9.js",
     "Home.css": "/reactHW5movies/static/css/Home.611e2cc5.chunk.css",
     "Home.js": "/reactHW5movies/static/js/Home.25724b27.chunk.js",
     "Search.css": "/reactHW5movies/static/css/Search.28688acb.chunk.css",
     "Search.js": "/reactHW5movies/static/js/Search.be31a96c.chunk.js",
     "Credits.css": "/reactHW5movies/static/css/Credits.b05810c6.chunk.css",
-    "Credits.js": "/reactHW5movies/static/js/Credits.36f94562.chunk.js",
+    "Credits.js": "/reactHW5movies/static/js/Credits.f1bd7339.chunk.js",
     "Reviews.css": "/reactHW5movies/static/css/Reviews.dd8c6ac2.chunk.css",
     "Reviews.js": "/reactHW5movies/static/js/Reviews.9b0c983f.chunk.js",
     "List.css": "/reactHW5movies/static/css/List.9128a173.chunk.css",
@@ -15,13 +15,13 @@
     "static/media/blue_long_2.svg": "/reactHW5movies/static/media/blue_long_2.caee745762db3e030d38.svg",
     "index.html": "/reactHW5movies/index.html",
     "main.ca9e5059.css.map": "/reactHW5movies/static/css/main.ca9e5059.css.map",
-    "main.b127fdf9.js.map": "/reactHW5movies/static/js/main.b127fdf9.js.map",
+    "main.aba6ecc9.js.map": "/reactHW5movies/static/js/main.aba6ecc9.js.map",
     "Home.611e2cc5.chunk.css.map": "/reactHW5movies/static/css/Home.611e2cc5.chunk.css.map",
     "Home.25724b27.chunk.js.map": "/reactHW5movies/static/js/Home.25724b27.chunk.js.map",
     "Search.28688acb.chunk.css.map": "/reactHW5movies/static/css/Search.28688acb.chunk.css.map",
     "Search.be31a96c.chunk.js.map": "/reactHW5movies/static/js/Search.be31a96c.chunk.js.map",
     "Credits.b05810c6.chunk.css.map": "/reactHW5movies/static/css/Credits.b05810c6.chunk.css.map",
-    "Credits.36f94562.chunk.js.map": "/reactHW5movies/static/js/Credits.36f94562.chunk.js.map",
+    "Credits.f1bd7339.chunk.js.map": "/reactHW5movies/static/js/Credits.f1bd7339.chunk.js.map",
     "Reviews.dd8c6ac2.chunk.css.map": "/reactHW5movies/static/css/Reviews.dd8c6ac2.chunk.css.map",
     "Reviews.9b0c983f.chunk.js.map": "/reactHW5movies/static/js/Reviews.9b0c983f.chunk.js.map",
     "List.9128a173.chunk.css.map": "/reactHW5movies/static/css/List.9128a173.chunk.css.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.ca9e5059.css",
-    "static/js/main.b127fdf9.js"
+    "static/js/main.aba6ecc9.js"
   ]
 }
