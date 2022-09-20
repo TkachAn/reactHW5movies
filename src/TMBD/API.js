@@ -36,6 +36,7 @@ export const apiTMDbDetails = async id => {
   const res = await axios.get(
     `${END_POINTS.movieDetails}/${id}?api_key=${API_KEY}&language=en-US&include_adult=false`
   );
+  // console.log('res.data', res.data); //production_countries
   return res.data;
 };
 
