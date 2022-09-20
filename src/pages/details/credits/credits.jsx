@@ -29,8 +29,41 @@ export default function Credits() {
   }, [id]);
   return (
     <>
-      {loading && 'Loading...'}
+      {loading && <h3 className={css.h3}>LOADING...</h3>}
       {error && <div>{error}</div>}
+      {castList.length ? (
+        <>
+          {' '}
+          <ul className={css.castList}>
+            {castList.map(castItem => {
+              return (
+                <li key={castItem.id} className={css.castItem}>
+                  <div className={css.tumb}>
+                    {castItem.profile_path ? (
+                      <img
+                        className={css.img}
+                        src={`https://image.tmdb.org/t/p/w300${castItem.profile_path}`}
+                        alt={`${castItem.name} portrait`}
+                      />
+                    ) : (
+                      <img src="https://via.placeholder.com/300x450" alt="" />
+                    )}
+                  </div>
+
+                  <div className={css.text}>
+                    <h4 className={css.h41}>{castItem.name}</h4>
+                    <p>Character: {castItem.character}</p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </>
+      ) : (
+        <>
+          <h3 className={css.h3}>cast list not available</h3>
+        </>
+      )}
       <ul className={css.castList}>
         {castList.map(castItem => {
           return (
