@@ -4,6 +4,8 @@ import {
   useParams,
   useLocation,
   useNavigate,
+  Link,
+  // useSearchParams,
 } from 'react-router-dom';
 import { useEffect, useState, Suspense } from 'react';
 import { apiTMDbDetails } from '../../TMBD/API';
@@ -13,13 +15,15 @@ export default function Details() {
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-
-  const id = useParams().details;
-  const getYear = () => new Date(movie.release_date).getFullYear();
-  const navigate = useNavigate();
   const location = useLocation();
-
-  const handleClick = () => navigate(location?.state?.from ?? '/');
+  console.log('location', location);
+  console.log('location', location?.state?.from);
+  const id = useParams().details;
+  const navigate = useNavigate();
+  // const handleClick = () => {
+  //   navigate(location?.state?.from ?? '/');
+  // };
+  const getYear = () => new Date(movie.release_date).getFullYear();
 
   useEffect(() => {
     setLoading(true);
@@ -59,12 +63,18 @@ export default function Details() {
             )}
           </div>
           <div className={css.block}>
-            <button className={css.btnBack} onClick={handleClick}>
+            <button
+              className={css.btnBack}
+              onClick={() => {
+                navigate(location?.state?.from ?? '/', { replace: false });
+              }}
+            >
               Go back
             </button>
+
+            <Link to={`/search/movie?query=o`}>GO BACK</Link>
             <h2 className={css.title}>{movie.title}</h2>
             <hr />
-
             <div className={css.inf}>
               <h3 className={css.h3}>Year:</h3>
               <p className={css.year}>({getYear()}) </p>
