@@ -14,11 +14,9 @@ export default function Details() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const location = useLocation();
-  console.log('location', location);
-  console.log('location', location?.state?.from);
+
   const id = useParams().details;
   const navigate = useNavigate();
-
   const getYear = () => new Date(movie.release_date).getFullYear();
 
   useEffect(() => {
