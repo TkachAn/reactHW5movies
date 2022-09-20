@@ -1,26 +1,11 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { SharedLayout } from 'pages/SharedLayout/SharedLayout';
-// import { Home } from 'pages/home/home';
 import Details from 'pages/details/details';
-// import { Search } from 'pages/search/search';
-// import { Credits } from 'pages/details/credits/credits';
-// import { Reviews } from 'pages/details/reviews/reviews';
-const Home = lazy(() =>
-  import('pages/home/home' /* webpackChunkName: "Home" */)
-);
-const Search = lazy(() =>
-  import('pages/search/search' /* webpackChunkName: "Search" */)
-);
-// const Details = lazy(() =>
-//   import('pages/details/details' /* webpackChunkName: "Details" */)
-// );
-const Credits = lazy(() =>
-  import('../pages/details/credits/credits' /* webpackChunkName: "Credits" */)
-);
-const Reviews = lazy(() =>
-  import('../pages/details/reviews/reviews' /* webpackChunkName: "Reviews" */)
-);
+const Home = lazy(() => import('pages/home/home'));
+const Search = lazy(() => import('pages/search/search'));
+const Credits = lazy(() => import('../pages/details/credits/credits'));
+const Reviews = lazy(() => import('../pages/details/reviews/reviews'));
 export const App = () => {
   return (
     <>
@@ -41,3 +26,10 @@ export const App = () => {
     </>
   );
 };
+// import { Home } from 'pages/home/home';
+// import { Search } from 'pages/search/search';
+// import { Credits } from 'pages/details/credits/credits';
+// import { Reviews } from 'pages/details/reviews/reviews';
+// const Details = lazy(() =>
+//   import('pages/details/details')
+// );
