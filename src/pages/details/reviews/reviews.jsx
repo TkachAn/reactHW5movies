@@ -50,7 +50,10 @@ export default function Reviews() {
           <p>
             You will be the first to leave a review here, but for this you need
             to register on
-            <a href="https://www.themoviedb.org/login"> the TMDB website</a>.
+            <a href="https://www.themoviedb.org/login">
+              <b> the TMDB website</b>
+            </a>
+            .
           </p>
         </>
       )}
